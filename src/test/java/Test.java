@@ -65,7 +65,7 @@ public class Test {
         Thread.sleep(1 * 5 * 1_000);
 
 
-        Files.newBufferedWriter(Paths.get("out.txt"), StandardOpenOption.CREATE).write(String.join("\n", content));
+        Files.newBufferedWriter(Paths.get("out.txt"), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING).write(String.join("\n", content));
         System.out.println("out.txt created");
     }
 }
